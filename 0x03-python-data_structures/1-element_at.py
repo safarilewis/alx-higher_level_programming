@@ -4,6 +4,6 @@ def element_at(my_list, idx):
         return None
     for i in my_list:
         if idx == i:
-            print("{:d}".format(i))
+            print("Element at {:d} is {:d}".format(i, my_list[i]))
         elif idx > i:
             return None
