@@ -6,7 +6,7 @@ Defines a class rectangle
 
 class Rectangle:
     """Representation of a rectangle"""
-    def __init__(self, width=0,height=0):
+    def __init__(self, width=0, height=0):
         """Initialized the rectangle"""
         self.height = height
         self.width = width
@@ -31,7 +31,7 @@ class Rectangle:
             return self.__height
 
         @height.setter
-        def height(self,value):
+        def height(self, value):
             """Setter for the height value"""
             if type(value) is not int:
                 raise TypeError("height must be an integer")
