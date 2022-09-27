@@ -3,4 +3,4 @@
 class BaseGeometry():
     """A class containing an unimplimented funct"""
     def area(self):
-        RaiseException("area() is not implemented")
+        raise Exception("area() is not implemented")
