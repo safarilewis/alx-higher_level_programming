@@ -16,5 +16,5 @@ except:
 
 for arg in argv[1:]:
     json_l.append(arg)
-    
+
 save(json_l, filename)
