@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-    """
-    returns JSON representation of an object(string)
-    """
-
+"""
+returns JSON representation of an object(string)
+"""
 
 import json
 
