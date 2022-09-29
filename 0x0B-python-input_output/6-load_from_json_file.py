@@ -9,4 +9,4 @@ import json
 def load_from_json_file(filename):
     """Creates object from filename"""
     with open(filename, 'r') as f:
-        print(f.read(json.load(f)), end='')
+        return json.load(f)
