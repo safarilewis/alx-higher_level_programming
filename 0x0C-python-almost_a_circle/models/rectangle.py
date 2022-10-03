@@ -78,3 +78,27 @@ class Rectangle(Base):
         """Returns the area of a rectangle"""
         return self.__width * self__height
         
+    #Display
+    def display(self):
+        """Displays a rectangle in terms of #"""
+
+    #Update
+    def update(self, *args, **kwargs):
+        """updates multiple attributes"""
+        if len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
