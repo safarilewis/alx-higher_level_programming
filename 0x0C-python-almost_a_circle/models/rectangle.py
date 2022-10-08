@@ -102,3 +102,27 @@ class Rectangle(Base):
                 elif a == 4:
                     self.y = arg
                 a += 1
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            
+            if "length" in kwargs:
+                self.length = kwargs["length"]
+            
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        return {
+            "id": self.id
+            "width": self.width
+            "height": self.height
+            "x": self.x
+            "y": self.y
+        }
