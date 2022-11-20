@@ -12,6 +12,7 @@ class Rectangle(Base):
         self.height=height
         self.x=x
         self.y=y
+        super().__init__(id)
 
     @width.setter
     def width(self,value):
