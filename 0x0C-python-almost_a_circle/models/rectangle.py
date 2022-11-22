@@ -16,18 +16,33 @@ class Rectangle(Base):
 
     @width.setter
     def width(self,value):
-        """Width setter"""
-        self.__width=value
+        """Width setter/getter"""
+        self.__width = value
+
+    @property
+    def width(self):
+        return self.__width
+    
 
     @height.setter
     def height(self,value):
         """Height Setter"""
         self.__height= value
 
+    @property
+    def height(self):
+        """Height getter"""
+        return self.__height
+    
     @x.setter
     def x(self,value):
         """x Setter"""
         self.__x=value
+
+    @property
+    def x(self):
+        """X getter"""
+        return self.__x
 
     @y.setter
     def y(self,value):
@@ -35,21 +50,7 @@ class Rectangle(Base):
         self.__y=value
 
     @property
-    def width(self):
-        """Getter for width"""
-        return self.__width
-
-    @property
-    def height(self):
-        """Getter for height"""
-        return self.__height
-
-    @property
-    def x(self):
-        """Getter for x"""
-        return self.__x
-
-    @property
     def y(self):
-        """Getter for y"""
+        """Y getter"""
         return self.__y
+    
