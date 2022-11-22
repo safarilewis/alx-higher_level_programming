@@ -4,6 +4,7 @@ Rectangle that inherits from base class
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """Class Rectangle that inherits from base"""
     def __init__(self, width,height,x=0,y=0,id=None):
@@ -12,7 +13,7 @@ class Rectangle(Base):
         self.height=height
         self.x=x
         self.y=y
-        #super().__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -44,16 +45,12 @@ class Rectangle(Base):
         """x Setter"""
         self.__x=value
 
-    
     @property
     def y(self):
         """Y getter"""
         return self.__y
-        
-    @y.setter
-    def y(self,value):
-        """y Setter"""
-        self.__y=value
 
-    
-    
+    @y.setter
+    def y(self, value):
+        """y Setter"""
+        self.__y = value
