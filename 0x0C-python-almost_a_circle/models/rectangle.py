@@ -94,8 +94,12 @@ class Rectangle(Base):
     def update(self, *args):
         """Assigns the args passed as the values"""
         for args in args:
-            args[0] = self.__id
-            args[1] = self.__width
-            args[2] = self.__height
-            args[3] = self.__x
-            args[4] = self.__y
+            if args != ():
+                try:
+                    args[0] = self.__id
+                    args[1] = self.__width
+                    args[2] = self.__height
+                    args[3] = self.__x
+                    args[4] = self.__y
+                except Exception:
+                    pass
