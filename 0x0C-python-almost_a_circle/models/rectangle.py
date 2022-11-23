@@ -91,4 +91,11 @@ class Rectangle(Base):
         """Returns details about a rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width,self.height)
 
-    
+    def update(self, *args):
+        for args in args:
+            if args != ():
+                args[0] = self.__id
+                args[1] = self.__width
+                args[2] = self.__height
+                args[3] = self.__x
+                args[4] = self.__y
