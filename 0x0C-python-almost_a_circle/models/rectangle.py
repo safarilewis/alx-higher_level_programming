@@ -92,6 +92,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width,self.height)
 
     def update(self, *args):
+        """Assigns the args passed as the values"""
         for args in args:
             if args != ():
                 args[0] = self.__id
