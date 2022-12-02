@@ -7,7 +7,7 @@ if __name__ = '__main__':
     cursor= cursor();
     cursor.execute("SELECT * FROM states ORDER BY states.id")
     data = cursor.fetchall()
-    for row in result:
+    for row in data:
         print(row)
     cursor.close()
     db.close
