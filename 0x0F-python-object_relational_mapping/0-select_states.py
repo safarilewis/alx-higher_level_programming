@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#Prints all states in the database
 import MySQLdb
 import sys
 
@@ -12,4 +13,3 @@ if __name__ == '__main__':
         print(row)
     cursor.close()
     db.close()
-    
