@@ -8,7 +8,7 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
     cursor.execute("""SELECT cities.id, cities.name, states.name FROM cities
-                    INNER JOIN states ON cities.states.id
+                    INNER JOIN states ON cities.states_id
                     ORDER BY cities.id;""")
     data = cursor.fetchall()
     for row in data:
