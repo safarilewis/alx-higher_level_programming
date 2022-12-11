@@ -12,7 +12,9 @@ if __name__ == '__main__':
                     WHERE states.name LIKE BINARY '%s'
                     ORDER BY cities.id;""", [sys.argv[4]])
     data = cursor.fetchall()
+    l = []
     for row in data:
-        print(row)
+        l.append(row[0])
+        print(", ".join(l))
     cursor.close()
     db.close()
