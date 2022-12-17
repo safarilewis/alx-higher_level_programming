@@ -2,10 +2,15 @@
 """Script that sends a POST request"""
 import sys
 import urllib.request
+import urllib.parse
 
 
 if __name__ == "__main__":
-    req = urllib.request.Request(sys.argv[1],sys.argv[2])
+    url = sys.argv[1]
+    value = sys.argv[2]
+    data = urllib.parse.urlencode(value)
+    data = data.encode('ascii')
+    req = urllib.request.Request(url,data)
     with urllib.request.urlopen(req) as response:
         response = response.read()
     print("Your email is: {}".format(response))
