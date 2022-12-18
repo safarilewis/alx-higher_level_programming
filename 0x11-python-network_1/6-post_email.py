@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == "__main__":
-    email = dict('email': sys.argv[2])
+    email = sys.argv[2]
     url = sys.argv[1]
-    response = requests.post(url, data=email)
+    response = requests.post(url, data={'email': email})
     print(response)
