@@ -5,8 +5,10 @@ import requests
 
 
 if __name__ == "__main__":
-    response = requests.get("https://api.github.com/repos/{}/{}/commits".format(sys.argv[1],
-                                                    sys.argv[2]), params = {'per_page': 10})
+    response = requests.get("https://api.github.com/repos/{}/{}/commits".
+                            format(sys.argv[2],sys.argv[1]), 
+                            params = {'per_page': 10})
     for commits in response.json():
-        print("{}:{}".format(commits.get("sha"), commits.get("commit").get("author").get("name")))
+        print("{}: {}".format(commits.get("sha"), commits.
+                             get("commit").get("author").get("name")))
    
