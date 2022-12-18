@@ -12,12 +12,10 @@ if __name__ == "__main__":
     try:
         empty = ["", {}, None]
         if "id" not in response.json().keys() or "name" \
-            not in response.json().keys():
+                not in response.json().keys():
             print("No result")
         else:
             print("[{}] {}".format(response.json().get("id"),
                                    response.json().get("name")))
     except ValueError:
         print("Not a valid JSON")
-
-
