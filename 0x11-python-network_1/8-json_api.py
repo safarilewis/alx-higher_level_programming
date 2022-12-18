@@ -5,9 +5,20 @@ import requests
 
 
 if __name__ == "__main__":
-    if sys.argv[1] == "":
-        q = ""
+    if len(sys.argv[1]) < 1:
+        value = {'q':""}
     else:
-        q = sys.argv[1]
-    response = requests.get("http://0.0.0.0:5000/search_user",params=q)
-    print(response.json)
+        value = {'q':sys.argv[1]}
+    response = requests.post("http://0.0.0.0:5000/search_user",value)
+    try:
+        empty=["",{},None]
+        if "id" not in response.json().keys() or "name" \
+            not in response.json().keys():
+            print("No result")
+        else:
+            print("[{}] {}".format(response.json().get("id"),
+                    response.json().get("name")))
+    except ValueError:
+        print("Not a valid JSON")
+
+
