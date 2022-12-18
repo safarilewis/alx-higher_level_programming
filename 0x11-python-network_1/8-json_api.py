@@ -5,7 +5,7 @@ import requests
 
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    if sys.argv[1] != "":
         q = sys.argv[1]
     else:
         q = ""
