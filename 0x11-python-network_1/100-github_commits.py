@@ -10,4 +10,4 @@ if __name__ == "__main__":
                             params={'per_page': 10})
     for commits in response.json():
         print("{}: {}".format(commits.get("sha"), commits.
-                               get("commit").get("author").get("name")))
+                              get("commit").get("author").get("name")))
