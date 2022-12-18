@@ -5,8 +5,9 @@ import requests
 
 
 if __name__ == "__main__":
+    value = {'q':""}
     if len(sys.argv) > 1:
-        value = {'q':sys.argv[1]}
+        value["q"] = sys.argv[1]
     response = requests.post("http://0.0.0.0:5000/search_user",value)
     try:
         empty=["",{},None]
