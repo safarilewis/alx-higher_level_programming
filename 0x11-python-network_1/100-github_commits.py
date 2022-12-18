@@ -5,8 +5,8 @@ import requests
 
 
 if __name__ == "__main__":
-    response = requests.get("https://api.github.com/repos/{}/{}/commits".format(sys.argv[1], sys.argv[2]))
-    x = 0
-    while x < 10:
-        print("{}: {}".format(response.get("sha"), response.get("commit").get("author").get("name")))
-        x += 1
+    response = requests.get("https://api.github.com/repos/{}/{}/commits".format(sys.argv[1],
+                                                    sys.argv[2]), params = {'per_page': 10})
+    for commits in response:
+        print("{}: {}".format(commits.get("sha"), commits.get("commit").get("author").get("name")))
+   
