@@ -9,7 +9,7 @@ request (process.argv[2], function (err, response, body){
     const characters = films['characters'];
     let count = 0;
     let answer;
-    for (count = 0; count < len(characters); count++){
+    for (count = 0; count < characters.length; count++){
         if (characters[count] == wedge){
             answer = answer + 1;
         }
