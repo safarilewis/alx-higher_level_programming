@@ -5,5 +5,5 @@ request(url, function(err, response, body){
     if (err){
         console.error(err);
     }
-    console.log(response)
+    console.log(response.statusCode)
 })
