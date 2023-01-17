@@ -6,3 +6,4 @@ request(url + process.argv[2], function(err, response, body){
         console.error(err);
     }
     console.log(JSON.parse(body).title);
+})
