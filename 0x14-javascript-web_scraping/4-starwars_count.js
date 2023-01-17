@@ -6,7 +6,7 @@ request (process.argv[2], function (err, response, body){
         console.error(err);
     }
     const films = JSON.parse(body);
-    const characters = films['characters'];
+    let characters = [films['characters']];
     let count = 0;
     let answer;
     for (count = 0; count < characters.length; count++){
