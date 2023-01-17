@@ -13,6 +13,6 @@ request(process.argv[2], function (err, response, body){
             }
             answer[todo.userId]++;
         }
-    console.log(answer);
     }
-})
+    console.log(answer);
+});
