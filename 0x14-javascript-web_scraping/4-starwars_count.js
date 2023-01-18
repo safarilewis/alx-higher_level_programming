@@ -1,18 +1,15 @@
 #!/usr/bin/node
 const request = require('request');
-const wedge = "https://swapi-api.alx-tools.com/api/people/18/";
-request (process.argv[2], function (err, response, body){
-    if (err){
-        console.error(err);
-    }
-    const films = JSON.parse(body);
-    let characters = [films['characters']];
+request(process.argv[2], function (err, res, body) {
+  if (err) console.log(err);
+  else {
+    const movies = JSON.parse(body).results;
     let count = 0;
-    let answer;
-    for (count = 0; count < characters.length; count++){
-        if (characters[count] == wedge){
-            answer = answer + 1;
-        }
+    let characters = [];
+    for (const movie of movies) {
+      characters = characters.concat(movie.characters);
     }
-    console.log(answer);
-} )
+    count = characters.filter(x => x.includes('18')).length;
+    console.log(count);
+  }
+});
